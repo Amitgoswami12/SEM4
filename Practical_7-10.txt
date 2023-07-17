@@ -1,0 +1,193 @@
+7)
+
+#include <stdio.h>
+#include <unistd.h>
+
+int main() {
+    pid_t pid = fork(); // create a new process
+
+    if (pid == 0) { // child process
+        printf("I am the child process with PID = %d\n", getpid());
+        // add code to be executed by the child process here
+    } else if (pid > 0) { // parent process
+        printf("I am the parent process with PID = %d and child process has PID = %d\n", getpid(), pid);
+        // add code to be executed by the parent process here
+    } else { // error
+        printf("Fork failed.\n");
+        return 1;
+    }
+
+    return 0;
+}
+
+
+8)
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <sys/ipc.h>
+#include <sys/shm.h>
+
+#define SHM_SIZE 1024 // size of shared memory segment
+
+int main() {
+    int shmid;
+    key_t key;
+    char *shm, *s;
+
+    // generate a unique key for the shared memory segment
+    if ((key = ftok("shm_demo", 'R')) == -1) {
+        perror("ftok");
+        exit(1);
+    }
+
+    // create the shared memory segment
+    if ((shmid = shmget(key, SHM_SIZE, 0644 | IPC_CREAT)) == -1) {
+        perror("shmget");
+        exit(1);
+    }
+
+    // attach to the shared memory segment
+    if ((shm = shmat(shmid, NULL, 0)) == (char *) -1) {
+        perror("shmat");
+        exit(1);
+    }
+
+    // write a message to the shared memory segment
+    strcpy(shm, "Hello, world!");
+
+    // read the message from the shared memory segment
+    for (s = shm; *s != '\0'; s++) {
+        putchar(*s);
+    }
+    putchar('\n');
+
+    // detach from the shared memory segment
+    if (shmdt(shm) == -1) {
+        perror("shmdt");
+        exit(1);
+    }
+
+    // delete the shared memory segment
+    if (shmctl(shmid, IPC_RMID, NULL) == -1) {
+        perror("shmctl");
+        exit(1);
+    }
+
+    return 0;
+}
+
+
+9)
+
+import threading
+
+class SumThread(threading.Thread):
+    def __init__(self, nums):
+        threading.Thread.__init__(self)
+        self.nums = nums
+        self.sum = 0
+    
+    def run(self):
+        for num in self.nums:
+            self.sum += num
+        
+        print("Sum:", self.sum)
+
+# main program
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+sum_thread = SumThread(nums)
+sum_thread.start()
+sum_thread.join()
+
+print("Main program finished")
+
+
+10)
+
+import threading
+
+# Two resources A and B
+resource_A = threading.Lock()
+resource_B = threading.Lock()
+
+# Thread 1 acquires resource A, then waits for resource B
+def thread_1():
+    print("Thread 1 starting")
+    resource_A.acquire()
+    print("Thread 1 acquired resource A")
+    resource_B.acquire()
+    print("Thread 1 acquired resource B")
+    resource_B.release()
+    resource_A.release()
+    print("Thread 1 released resources")
+
+# Thread 2 acquires resource B, then waits for resource A
+def thread_2():
+    print("Thread 2 starting")
+    resource_B.acquire()
+    print("Thread 2 acquired resource B")
+    resource_A.acquire()
+    print("Thread 2 acquired resource A")
+    resource_A.release()
+    resource_B.release()
+    print("Thread 2 released resources")
+
+# main program
+t1 = threading.Thread(target=thread_1)
+t2 = threading.Thread(target=thread_2)
+
+t1.start()
+t2.start()
+
+t1.join()
+t2.join()
+
+print("Main program finished")
+
+
+11)
+
+import threading
+import queue
+import time
+import random
+
+# create a shared queue
+BUFFER_SIZE = 10
+queue = queue.Queue(BUFFER_SIZE)
+
+# define the producer thread
+class ProducerThread(threading.Thread):
+    def run(self):
+        while True:
+            # produce an item
+            item = random.randint(1, 100)
+            print(f"Produced item {item}")
+
+            # wait for space in the queue
+            queue.put(item)
+            time.sleep(random.random())
+
+# define the consumer thread
+class ConsumerThread(threading.Thread):
+    def run(self):
+        while True:
+            # wait for an item in the queue
+            item = queue.get()
+            print(f"Consumed item {item}")
+
+            # process the item
+            time.sleep(random.random())
+
+# create and start the threads
+producer_thread = ProducerThread()
+consumer_thread = ConsumerThread()
+producer_thread.start()
+consumer_thread.start()
+
+# wait for the threads to finish
+producer_thread.join()
+consumer_thread.join()

@@ -1,0 +1,258 @@
+1)
+#!/bin/bash
+
+# Accept the input number from the user
+read -p "Enter a number: " num
+
+# Initialize the sum variable
+sum=0
+
+# Loop through all the odd numbers below the input number
+for (( i=1; i<$num; i+=2 ))
+do
+    echo $i
+    # Add the odd number to the sum
+    sum=$((sum+i))
+done
+
+# Display the sum of all the odd numbers
+echo "Sum of odd numbers below $num is: $sum"
+
+
+2)
+#!/bin/bash
+
+# Prompt the user to enter a series of numbers
+echo "Enter a series of numbers separated by spaces:"
+read input
+
+# Prompt the user to choose the sorting order
+echo "Sort in ascending or descending order? (a/d)"
+read order
+
+# Sort the numbers in the chosen order
+if [ "$order" == "a" ]; then
+  sorted=$(echo $input | tr ' ' '\n' | sort -n | tr '\n' ' ')
+elif [ "$order" == "d" ]; then
+  sorted=$(echo $input | tr ' ' '\n' | sort -nr | tr '\n' ' ')
+else
+  echo "Invalid choice"
+  exit 1
+fi
+
+# Display the sorted list
+echo "Sorted list:"
+echo $sorted
+
+3)
+#!/bin/bash
+
+# Prompt the user to enter a number
+echo "Enter a number:"
+read num
+
+# Calculate the number of digits in the number
+n=${#num}
+
+# Calculate the sum of the cubes of the digits
+sum=0
+for ((i=0;i<$n;i++)); do
+  digit=${num:$i:1}
+  cube=$((digit*digit*digit))
+  sum=$((sum+cube))
+done
+
+# Check whether the number is an Armstrong number or not
+if [ $num -eq $sum ]; then
+  echo "$num is an Armstrong number"
+else
+  echo "$num is not an Armstrong number"
+fi
+
+
+4)
+# Scan 10 integers into array A
+A = []
+print("Enter 10 integers for array A:")
+for i in range(10):
+    A.append(int(input()))
+
+# Scan 30 integers into array B
+B = []
+print("Enter 30 integers for array B:")
+for i in range(30):
+    B.append(int(input()))
+
+# Concatenate array A to array B
+C = B + A
+
+# Ask user for choice of sorting algorithm
+print("Which sorting algorithm do you want to use?")
+print("1. Bubble sort")
+print("2. Selection sort")
+print("3. Insertion sort")
+choice = int(input())
+
+# Apply sorting algorithm according to user's choice
+if choice == 1:
+    # Bubble sort
+    for i in range(len(C)):
+        for j in range(len(C)-1):
+            if C[j] > C[j+1]:
+                C[j], C[j+1] = C[j+1], C[j]
+elif choice == 2:
+    # Selection sort
+    for i in range(len(C)):
+        min_index = i
+        for j in range(i+1, len(C)):
+            if C[j] < C[min_index]:
+                min_index = j
+        C[i], C[min_index] = C[min_index], C[i]
+elif choice == 3:
+    # Insertion sort
+    for i in range(1, len(C)):
+        key = C[i]
+        j = i - 1
+        while j >= 0 and key < C[j]:
+            C[j+1] = C[j]
+            j -= 1
+        C[j+1] = key
+
+# Print the sorted array
+print("Sorted array:")
+print(C)
+
+
+5)
+
+#!/bin/bash
+
+# Define an array with duplicate values
+arr=(1 2 3 3 4 5 5 6)
+
+# Use a loop to iterate over the array and remove duplicate values
+for i in "${!arr[@]}"; do
+    for j in "${!arr[@]}"; do
+        if [[ "${arr[$i]}" = "${arr[$j]}" && "$i" -ne "$j" ]]; then
+            unset arr[$j]
+        fi
+    done
+done
+
+# Print the resulting array with duplicate values removed
+echo "${arr[@]}"
+
+
+6)
+
+#!/bin/bash
+
+# Define array A
+A=(1 2 3 4 5)
+
+# Define array B
+B=(6 7 8 9 10)
+
+# Find the length of arrays A and B
+len_A=${#A[@]}
+len_B=${#B[@]}
+
+# Check if arrays A and B have the same length
+if [ $len_A -ne $len_B ]
+then
+    echo "Error: Arrays A and B have different lengths"
+    exit 1
+fi
+
+# Define an array C to store the sum of A and B
+C=()
+
+# Loop through the indices of arrays A and B
+for i in $(seq 0 $(($len_A-1)))
+do
+    # Add the elements of A and B at the same index, and append the result to array C
+    C+=( $(( ${A[$i]} + ${B[$i]} )) )
+done
+
+# Print the sum of arrays A and B
+echo "Sum of arrays A and B: ${C[@]}"
+
+
+8)
+#!/bin/bash
+
+# Prompt the user to enter a string
+echo "Enter a string: "
+read string
+
+# Check if the first letter of each word is uppercase
+if [[ $string =~ ^[[:upper:]][[:lower:]]+(\ [[:upper:]][[:lower:]]+)*$ ]]; then
+    echo "The string is in title case."
+else
+    echo "The string is not in title case."
+fi
+
+
+7)
+
+#!/bin/bash
+
+# Define the array
+arr=(1 2 3 4 5)
+
+# Get the length of the array
+len=${#arr[@]}
+
+# Loop through the array and swap elements
+for (( i=0; i<$len/2; i++ )); do
+  temp=${arr[i]}
+  arr[i]=${arr[$len-i-1]}
+  arr[$len-i-1]=$temp
+done
+
+# Print the reversed array
+echo "${arr[@]}"
+
+
+
+9)
+#!/bin/bash
+
+# Prompt the user to enter a word
+echo "Enter a word: "
+read word
+
+# Check if the word is all uppercase
+if [[ $word =~ ^[[:upper:]]+$ ]]; then
+    echo "The word is an uppercase word."
+else
+    echo "The word is not an uppercase word."
+fi
+
+
+10)
+
+#!/bin/bash
+
+# Prompt the user to enter a string
+echo "Enter a string: "
+read string
+
+# Split the string into an array of words
+words=($string)
+
+# Initialize a counter for uppercase words
+count=0
+
+# Loop through each word in the array
+for word in "${words[@]}"; do
+    # Check if the word is all uppercase
+    if [[ $word =~ ^[[:upper:]]+$ ]]; then
+        # Increment the counter if the word is all uppercase
+        ((count++))
+    fi
+done
+
+# Output the number of uppercase words
+echo "The string contains $count uppercase words."
+

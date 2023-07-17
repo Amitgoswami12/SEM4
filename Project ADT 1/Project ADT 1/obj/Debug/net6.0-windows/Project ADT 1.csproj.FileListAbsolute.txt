@@ -1,0 +1,36 @@
+A:\C#\Project ADT 1\Project ADT 1\bin\Debug\net6.0-windows\Project ADT 1.exe
+A:\C#\Project ADT 1\Project ADT 1\bin\Debug\net6.0-windows\Project ADT 1.deps.json
+A:\C#\Project ADT 1\Project ADT 1\bin\Debug\net6.0-windows\Project ADT 1.runtimeconfig.json
+A:\C#\Project ADT 1\Project ADT 1\bin\Debug\net6.0-windows\Project ADT 1.dll
+A:\C#\Project ADT 1\Project ADT 1\bin\Debug\net6.0-windows\Project ADT 1.pdb
+A:\C#\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\Project ADT 1.csproj.AssemblyReference.cache
+A:\C#\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\Project_ADT_1.Form1.resources
+A:\C#\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\Project_ADT_1.Properties.Resources.resources
+A:\C#\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\Project ADT 1.csproj.GenerateResource.cache
+A:\C#\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\Project ADT 1.GeneratedMSBuildEditorConfig.editorconfig
+A:\C#\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\Project ADT 1.AssemblyInfoInputs.cache
+A:\C#\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\Project ADT 1.AssemblyInfo.cs
+A:\C#\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\Project ADT 1.csproj.CoreCompileInputs.cache
+A:\C#\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\Project ADT 1.dll
+A:\C#\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\refint\Project ADT 1.dll
+A:\C#\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\Project ADT 1.pdb
+A:\C#\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\Project ADT 1.genruntimeconfig.cache
+A:\C#\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\ref\Project ADT 1.dll
+C:\Users\AMIT GOSWAMI\OneDrive\Desktop\Project ADT 1\Project ADT 1\bin\Debug\net6.0-windows\Project ADT 1.exe
+C:\Users\AMIT GOSWAMI\OneDrive\Desktop\Project ADT 1\Project ADT 1\bin\Debug\net6.0-windows\Project ADT 1.deps.json
+C:\Users\AMIT GOSWAMI\OneDrive\Desktop\Project ADT 1\Project ADT 1\bin\Debug\net6.0-windows\Project ADT 1.runtimeconfig.json
+C:\Users\AMIT GOSWAMI\OneDrive\Desktop\Project ADT 1\Project ADT 1\bin\Debug\net6.0-windows\Project ADT 1.dll
+C:\Users\AMIT GOSWAMI\OneDrive\Desktop\Project ADT 1\Project ADT 1\bin\Debug\net6.0-windows\Project ADT 1.pdb
+C:\Users\AMIT GOSWAMI\OneDrive\Desktop\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\Project ADT 1.csproj.AssemblyReference.cache
+C:\Users\AMIT GOSWAMI\OneDrive\Desktop\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\Project_ADT_1.Form1.resources
+C:\Users\AMIT GOSWAMI\OneDrive\Desktop\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\Project_ADT_1.Properties.Resources.resources
+C:\Users\AMIT GOSWAMI\OneDrive\Desktop\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\Project ADT 1.csproj.GenerateResource.cache
+C:\Users\AMIT GOSWAMI\OneDrive\Desktop\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\Project ADT 1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AMIT GOSWAMI\OneDrive\Desktop\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\Project ADT 1.AssemblyInfoInputs.cache
+C:\Users\AMIT GOSWAMI\OneDrive\Desktop\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\Project ADT 1.AssemblyInfo.cs
+C:\Users\AMIT GOSWAMI\OneDrive\Desktop\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\Project ADT 1.csproj.CoreCompileInputs.cache
+C:\Users\AMIT GOSWAMI\OneDrive\Desktop\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\Project ADT 1.dll
+C:\Users\AMIT GOSWAMI\OneDrive\Desktop\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\refint\Project ADT 1.dll
+C:\Users\AMIT GOSWAMI\OneDrive\Desktop\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\Project ADT 1.pdb
+C:\Users\AMIT GOSWAMI\OneDrive\Desktop\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\Project ADT 1.genruntimeconfig.cache
+C:\Users\AMIT GOSWAMI\OneDrive\Desktop\Project ADT 1\Project ADT 1\obj\Debug\net6.0-windows\ref\Project ADT 1.dll
